@@ -68,17 +68,18 @@ class Bubble {
   }
   void safety () {
     if (xspeed < 0.1 && xspeed > -0.1) {
-      x = width / 2 ;
-      y = height / 2 ;
-      xspeed = random(-2,2);
-      yspeed = random(-2,2);
+      newSpeed();
     }
     if (yspeed < 0.1 && yspeed > -0.1) {
-      x = width / 2 ;
-      y = height / 2 ;
-      xspeed = random(-2,2);
-      yspeed = random(-2,2);
+     newSpeed();
     }
   }
 
+}
+
+float newSpeed() {
+  float xspeed = random(-2,2);
+  float yspeed = random(-2,2);
+  return (xspeed, yspeed);
+  
 }
